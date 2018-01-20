@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <title>מערכת לניהול מסעדה</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="mystyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="Ajax.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Suez+One" rel="stylesheet"> 
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">ראשי</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#citys">ערים</a></li>
+        <li><a href="#customers">לקוחות</a></li>
+        <li><a href="#about">אודותינו</a></li>
+        <li><a href="#services">שירות לקוחות</a></li>
+        <li><a href="#snif">סניפים</a></li>
+        <li><a href="#pricing">מחירון</a></li>
+        <li><a href="#contact">צרו קשר</a></li>    
+     </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">  
+  <h1>מערכת לניהול מסעדה</h1> 
+  <p>מנהלים ואוכלים</p>
+   <form class="form-inline">
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="כתובת האימייל שלך" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">שלח</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div id="citys" class="container-fluid  bg-grey">
+			<H1>רשימת ערים</H1>
+			<button id="city_button">הצג רשימת ערים</button>
+			
+	<div class="row">
+			<div  class="col-md-6">
+					<table dir="rtl">
+						<div id="city_rows">
+						<div id="formpcityupdate"></div>
+						</div>
+					</table>
+			</div>
+			<div class="col-md-6 ">
+					<div id="city_form" dir="rtl">
+					</div>
+			</div>
+	</div>
+</div>
+
+<div id="customers" class="container-fluid text-center bg-grey">
+<H1>רשימת לקוחות</H1>
+<button id="customer_button">הצג רשימת לקוחות</button>
+<table>
+	<div id="customer_rows">
+	</div>
+</table>
+<div id="customer_form">
+</div>
+</div>
+
+<div id="about" class="container-f bg-grey text-center" >
+  <div>
+  <h1>אודותינו</h1>
+  <h2><marquee direction="up" scrollamount=1> 
+  זה התחיל ברעיון של הבעלים להקים מסעדה בעלת קונספט קצת שונה מהקיים כיום בשוק, קונספט של מסעדות מעוצבות לצד מטבח המעניק שפע ולצד שירות משפחתי חם. בעצם, מקום שישלב אוכל טוב, מנות גדולות ומשביעות עם מחירים עממים, אווירה של סעודת מלכים עם תחושה נינוחה וביתית
+  </marquee></h2> 
+  <p></p>
+  <button class="btn btn-default btn-lg">צור קשר</button>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+<!--
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>      
+      <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+    </div>
+  </div>-->
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid  bg-grey text-center">
+  <h2>שירות לקוחות</h2>
+  <h4>מה אנחנו מציעים</h4>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>הפעלת השירות</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>אהבה בלתי נשכחת</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>מזוודה מלאה $</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>עלה כתום</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>שירות מהכוכבים</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 >מפתח שוודי</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="snif" class="container-fluid text-center bg-grey">
+  <h2>סניפים</h2><br>
+  <h4>יצירות המופת שלנו</h4>
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="arabica.jpg" alt="arabica" width="400" height="300">
+        <p><strong>ערביקה</strong></p>
+        <p>המסעדה המוצלחת של באר שבע..</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="kampai.jpg" alt="kampai" width="400" height="300">
+        <p><strong>קמפאי</strong></p>
+        <p>מסעדה ברמה בין לאומית..</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="nafis.jpg" alt="nafis" width="400" height="300">
+        <p><strong>נאפיס</strong></p>
+        <p>המסעדה המפנקת..</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>מה אומרים לקוחותינו...</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"רשת המסעדות הזו היא .. the best. אני מאד אוהב לאכול שם.."<br><span>אורז או ר ליז .. זמר..</span></h4>
+      </div>
+      <div class="item">
+        <h4>"במילה אחת... WOW!!"<br><span>שלומי דבוש, סוחר בשוק..</span></h4>
+      </div>
+      <div class="item">
+        <h4>"יש משהו יותר מהנה מלאכול ברשת המסעדות הזו?.."<br><span>DJ אנדריי</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>מחירון</h2>
+    <h4>בחר את סוג החבילה המועדפת עליך</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>בסיסית</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>לסועד</h4>
+          <button class="btn btn-lg">בצע הזמנה</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>עיסקית</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>לסועד</h4>
+          <button class="btn btn-lg">בצע הזמנה</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>פרימיום</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>לסועד</h4>
+          <button class="btn btn-lg">בצע הזמנה</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">צור קשר</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>כתוב לנו ונחזור אליך תוך 24 שעות</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> באר שבע</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 08-6466666</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> resturant@something.com</p>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="שם" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="אימייל" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="כתוב לנו" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">שלח</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+ $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+
+
+<style>
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 80px;
+    cursor: pointer;
+    font-size: 30px;
+     -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+   
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 60px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #999966;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color:#999966;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+    
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 40px;
+	height: 40px;
+	border-radius: 80%;
+	background: 999966;
+   border: 1px solid white;
+}
+</style>
+
+<script>
+
+import { RouterModule, Routes } from '@angular/router';
+import { HttpRequest } from '@angular/common/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    // Include it under 'imports' in your application module
+    // after BrowserModule.
+    HttpClientModule,
+  ],
+})
+export class MyAppModule {}
+
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http({
+    method : "GET",
+    url : "http://dvns.me/yaniv/clientest/public/explorePictures"
+  }).then(function onSuccess(response) {
+	  debugger
+      $scope.data = response.data;
+    }, function onError(response) {
+      $scope.data = response.statusText;
+  });
+});
+
+
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/home", {
+        template : 0
+    })
+    .when("/picture", {
+        template : 1
+    });
+});
+
+
+
+
+</script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+
+
+<body ng-app="myApp">
+<a href="#container" data-toggle="collapse">Home</a>
+<a href="#picture">Picture</a>
+</body>
+
+
+
+
+
+
+<div id="container" class="collapse">
+<label class="container">
+  <input type="radio"  name="radio">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<!-- 
+<label class="container">
+  <input type="radio"  name="radio">
+  <span class="checkmark"></span>
+</label>
+</body> -->
+
+
+
+
+
+</body>
+</html>

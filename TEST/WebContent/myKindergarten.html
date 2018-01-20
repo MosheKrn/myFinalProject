@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+  <title>מערכת למוסדות חינוך</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="myStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="Ajax.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Suez+One" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Suez+One" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Secular+One|Suez+One" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Secular+One|Suez+One&subset=hebrew');
+@import url('https://fonts.googleapis.com/css?family=Secular+One&subset=hebrew');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+</head>
+
+
+
+<body>
+
+
+<nav class="navbar">
+
+
+   
+     
+      <ul>
+      <li><a class="navbar-brand">
+       <input type="button" class="btn btn-primary btn-md"  value="כניסת סגל" onclick="window.location='index.jsp'" >
+      </a></li>
+  <li><a href="#about">אודותינו</a></li>
+  <li><a href="#events">אירועים</a></li>
+  
+  <li><a href="#keapOnTouch">שמרו על קשר</a></li>
+</ul>
+</nav>
+
+<div class="firstP text-center">  
+  <h1>בית ספר</h1> 
+ </div>
+ 
+ 
+
+<div id="about"  class="aboutUs text-center">
+  
+  <h1>אודותינו</h1>
+  
+<p>בית  ספרנו שבמרכז העיר באר שבע</p>
+
+<p>הוא הוקם בשנת 1973, סמוך לפרוץ מלחמת יום הכיפורים.</p>
+ 
+<p>בית הספר מקנה לתלמידיו ערכים חשובים ובסיסיים </p> 
+
+<p>רבים מתלמידינו ממשיכים ללימודים אקדמיים ריאלים </p>
+
+</div>
+
+<div id="events" class="events text-center">
+
+  <h3>אירועים</h3>
+  
+    <div class="col-sm-4">
+      <p class="text-center"><strong>מסע לפולין</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="poland.jpg" class="img-circle person" alt="Random Name" width="300" height="300">
+      </a>
+      <div id="demo" class="collapse">
+        <p>כיתות יב' תשע"ו</p>
+        <p>21/5/16-05/06/16</p>
+      </div>
+    </div>
+    
+    <div class="col-sm-4">
+      <p class="text-center"><strong>יום פעילויות</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="activityDay.jpg" class="img-circle person" alt="Random Name" width="300" height="300">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>תלמידי חטיבת הביניים</p>
+        <p>02/03/16</p>
+      </div>
+    </div>
+    
+    <div class="col-sm-4">
+      <p class="text-center"><strong>טיול שנתי</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="annualTrip.jpg" class="img-circle person" alt="Random Name" width="300" height="300">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>מצדה</p>
+        <p>06/06/16-08/06/16</p>
+      </div>
+    </div>
+    
+    
+</div>
+
+
+
+
+<div class="keapOnTouch text-center">
+ <h2>צור קשר</h2>
+  
+   
+      <p><span class="glyphicon glyphicon-map-marker"></span>תל אביב, ישראל</p>
+      <p><span class="glyphicon glyphicon-phone"></span>0526578124</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Mosherks@gmail.com</p>       
+   
+ 
+  
+</div>
+
+
+
+
+
+
+</body>
+
+
+</html>
